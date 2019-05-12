@@ -1,4 +1,4 @@
-{% set version = "0.4.0" %}
+{% set version = '0.4.0' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: paco_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/paco_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/paco/paco_{{ version }}.tar.gz
   sha256: 6f47bccb5c69b9154312c42e7b7e8cafaa2658422a666c0402a98b9064baa5c2
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -26,10 +25,12 @@ requirements:
     - {{posix}}zip               # [win]
   host:
     - r-base
+    - r-ape
     - r-plyr
     - r-vegan >=2.2_0
   run:
     - r-base
+    - r-ape
     - r-plyr
     - r-vegan >=2.2_0
 
@@ -48,9 +49,23 @@ about:
 extra:
   recipe-maintainers:
     - nick-youngblut
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+    - conda-forge/r
+
+# Package: paco
+# Version: 0.4.0
+# Date: 2019-05-12
+# Title: Procrustes Application to Cophylogenetic Analysis
+# Description: Procrustes analyses to infer co-phylogenetic matching between pairs of (ultrametric) phylogenetic trees.
+# Author: Juan Antonio Balbuena <j.a.balbuena@uv.es>, Timothee Poisot <tim@poisotlab.io>, Matthew Hutchinson <matthewhutchinson15@gmail.com>, Fernando Cagua <fernando@cagua.co>
+# Maintainer: Matthew Hutchinson <matthewhutchinson15@gmail.com>
+# Depends: R (>= 3.0.0)
+# Imports: vegan (>= 2.2-0), ape, plyr
+# Suggests: testthat
+# License: MIT + file LICENSE
+# URL: http://www.uv.es/cophylpaco/
+# Encoding: UTF-8
+# RoxygenNote: 6.1.1
+# NeedsCompilation: no
+# Packaged: 2019-05-12 20:51:42 UTC; matthew
+# Repository: CRAN
+# Date/Publication: 2019-05-12 21:10:03 UTC
