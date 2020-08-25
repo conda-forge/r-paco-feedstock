@@ -5,7 +5,7 @@ Home: http://www.uv.es/cophylpaco/
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Procrustes analyses to infer co-phylogenetic matching between pairs of (ultrametric) phylogenetic trees.
 
