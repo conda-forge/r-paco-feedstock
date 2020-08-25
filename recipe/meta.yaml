@@ -1,4 +1,4 @@
-{% set version = "0.4.1" %}
+{% set version = "0.4.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/paco_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/paco/paco_{{ version }}.tar.gz
-  sha256: 2d1c4e304436dda8fd8626514be33f4e6611ff550f194f3712157ad167dd9b6e
+  sha256: 6d1f6270cc8eea4064d26696c463b3e19a63a94494c6bedbd2a71d575873025c
 
 build:
   merge_build_host: true  # [win]
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
