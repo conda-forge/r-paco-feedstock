@@ -1,11 +1,11 @@
-About r-paco
-============
+About r-paco-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-paco-feedstock/blob/main/LICENSE.txt)
 
 Home: http://www.uv.es/cophylpaco/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-paco-feedstock/blob/main/LICENSE.txt)
 
 Summary: Procrustes analyses to infer co-phylogenetic matching between pairs of (ultrametric) phylogenetic trees.
 
